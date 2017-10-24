@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       
+    <bean name="/coin/sign.action" class="com.control.coin.SignController"></bean>
+    <bean name="/coin/query.action" class="com.control.coin.QueryCoinController"></bean>
+    <bean name="/coin/update.action" class="com.control.coin.UpdateCoinController"></bean>
+    <bean name="/coin/checkSignToday.action" class="com.control.coin.CheckSignTodayController"></bean>
+    
+    <bean name="/card/create.action" class="com.control.vip.card.CreateVipCardController"></bean>
+    <bean name="/card/querybyid.action" class="com.control.vip.card.QueryVipCardByIDController"></bean>
+    <bean name="/card/query.action" class="com.control.vip.card.QueryVipCardController"></bean>
+    <bean name="/card/update.action" class="com.control.vip.card.UpdateVipCardController"></bean>
+    
+    <bean name="/card/queryaj.action" class="com.control.vip.card.aj.QueryCardController"></bean>
+    
+    <bean name="/member/apply.action" class="com.control.vip.member.aj.CreateVipMemberController"></bean>
+    <bean name="/member/queryblance.action" class="com.control.vip.member.aj.QueryVipMemberBlanceController"></bean>
+    <bean name="/member/query.action" class="com.control.vip.member.aj.QueryVipMemberController"></bean>
+    <bean name="/member/querydiscount.action" class="com.control.vip.member.aj.QueryVipMemberDiscountController"></bean>
+
+    <bean name="/member/queryapply.action" class="com.control.vip.member.QueryApplyVipMemberController"></bean>
+    <bean name="/member/agree.action" class="com.control.vip.member.AgreeVipMemberController"></bean>
+    <bean name="/member/refuse.action" class="com.control.vip.member.RefuseVipMemberController"></bean>
+    <bean name="/member/queryall.action" class="com.control.vip.member.QueryAllVipMemberController"></bean>
+    <bean name="/member/updateleverl.action" class="com.control.vip.member.UpdateLevelController"></bean>
+    
+    <bean name="/coupon/create.action" class="com.control.coupon.CreateCouponController"></bean>
+    <bean name="/coupon/update.action" class="com.control.coupon.UpdateCouponController"></bean>
+    <bean name="/coupon/delete.action" class="com.control.coupon.DeleteCouponController"></bean>
+    <bean name="/coupon/query_store.action" class="com.control.coupon.QueryStoreCouponController"></bean>
+    
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="200000000000" />
+	</bean>	
+</beans>
